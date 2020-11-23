@@ -8,9 +8,9 @@ class Mybot ():
         pass
 
     def start (self , update , context):
-        context.bot.send_message(chat_id=update.message.chat.id, text="I'm a bot, please talk to me!")
+        context.bot.send_message(chat_id=update.message.chat.id, text="I")
         print(update.message.chat.id)
-        
+        context.bot.send_message(chat_id=update.message.chat.id , text=  "@"+update.message.from_user.username + " _ " + update.message.text)
 
     def text(self , update , context):
         context.bot.send_message(chat_id=update.message.chat.id , text=  "@"+update.message.from_user.username + " _ " + update.message.text)
