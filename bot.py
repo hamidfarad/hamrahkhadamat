@@ -8,7 +8,7 @@ class Mybot ():
         pass
 
     def start (self , update , context):
-        context.bot.send_message(chat_id=update.message.chat.id, text="I'm a bot, please talk to me!")
+        context.bot.send_message(chat_id=156298391, text="I'm a bot, please talk to me!")
         print(update.message.chat.id)
         
 
@@ -34,7 +34,7 @@ class Mybot ():
         
         TOKEN = "1414294529:AAF-Hjd9HuYnsotb4nfUFr9JkIy8K8IDEFI"
         updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-        updater.bot.setWebhook('https://ancient-oasis-54991.herokuapp.com/' + TOKEN)
+        updater.bot.setWebhook('https://hamrahkhadamat.herokuapp.com/' + TOKEN)
         updater.idle()
 
 bot = Mybot ()
