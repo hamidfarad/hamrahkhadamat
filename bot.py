@@ -1,9 +1,7 @@
 from telegram.ext import Updater
 from telegram.ext import CommandHandler,MessageHandler,Filters
 import os
-
 PORT = int(os.environ.get('PORT', 5000))
-
 
 class Mybot ():
     def __init__(self):
@@ -32,11 +30,11 @@ class Mybot ():
         updater.dispatcher.add_handler(CommandHandler('start' , self.start))
         updater.dispatcher.add_handler(MessageHandler(Filters.text , self.text , pass_user_data=True))
         updater.dispatcher.add_handler(MessageHandler(Filters.text , self.offf ))
+
         
         TOKEN = "1414294529:AAF-Hjd9HuYnsotb4nfUFr9JkIy8K8IDEFI"
         updater.start_webhook(listen="0.0.0.0",port=int(PORT),url_path=TOKEN)
-        updater.bot.setWebhook('https://hamrahkhadamat.herokuapp.com/' + TOKEN)
-        
+        updater.bot.setWebhook('https://ancient-oasis-54991.herokuapp.com/' + TOKEN)
         updater.idle()
 
 bot = Mybot ()
