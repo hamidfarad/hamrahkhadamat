@@ -8,12 +8,12 @@ class Mybot ():
         pass
 
     def start (self , update , context):
-        context.bot.send_message(chat_id=156298391, text="I'm a bot, please talk to me!")
+        context.bot.send_message(chat_id=update.message.chat.id, text="I'm a bot, please talk to me!")
         print(update.message.chat.id)
         
 
     def text(self , update , context):
-        context.bot.send_message(chat_id=156298391 , text=  "@"+update.message.from_user.username + " _ " + update.message.text)
+        context.bot.send_message(chat_id=update.message.chat.id , text=  "@"+update.message.from_user.username + " _ " + update.message.text)
         user = update.message.from_user
         print('You talk with user {} and his user ID: {} '.format(user['username'], user['id']))
         print(update.message.chat.first_name)
